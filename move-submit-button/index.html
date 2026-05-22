@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Submit Button</title>
+</head>
+<style>
+    body{
+        height: 90vh;
+        display: flex;
+        background: url('bg.jpg') no-repeat fixed center;
+    }
+
+    main{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 30%;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    form{
+        background-color: #ffffffcc;
+        border: 2px solid #ffffffcc;
+        padding: 2em 3em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    div{
+        width: 80%;
+        margin-bottom: 3%;
+    }
+
+    input{
+        width: 100%;
+        padding: 1em;
+        outline: none;
+        border: #000 1px solid;
+    }
+
+    #submit_btn_div{
+        text-align: left;
+    }
+
+    button{
+        width: 40%;
+        padding: 10px;
+        border: #000 solid 2px;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <main>
+        <form>
+            <div id="error"></div>
+            <div>
+                <input type="username" placeholder="Username" name="username" id="username" required>
+            </div>
+
+            <div>
+                <input type="password" placeholder="Password" name="password" id="password" required>
+            </div>
+
+            <div id="submit_btn_div">
+                <button id="submit_btn">Submit</button>
+            </div>
+        </form>
+    </main>
+</body>
+<script>
+    let username_input = document.getElementById('username');
+    let password_input = document.getElementById('password');
+    let submit_btn = document.getElementById('submit_btn');
+    let submit_btn_div = document.getElementById('submit_btn_div')
+    let error = document.getElementById('error');
+    currentSubmitBtnPosition = window.getComputedStyle(submit_btn_div).textAlign
+
+    submit_btn.addEventListener('mouseover', () => {
+        if (username_input.value == "" || password_input.value == "") {
+
+            error.innerHTML = "Vous devez remplir les champs avant de soumettre le formulaire!";
+            error.style.color = "red"
+            error.style.textAlign = "center"
+
+            if (currentSubmitBtnPosition == "left") {
+                submit_btn_div.style.textAlign = "right"
+                currentSubmitBtnPosition = window.getComputedStyle(submit_btn_div).textAlign
+            } else {
+                submit_btn_div.style.textAlign = "left"
+                currentSubmitBtnPosition = window.getComputedStyle(submit_btn_div).textAlign
+            }
+
+        } else {
+            error.innerHTML = "";
+            submit_btn_div.style.textAlign = "left";
+            currentSubmitBtnPosition = window.getComputedStyle(submit_btn_div).textAlign;
+        }
+    })
+</script>
+</html>
