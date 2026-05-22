@@ -8,15 +8,15 @@ A personal collection of scripts and projects resulting from programming challen
 
 | Challenge | Description |
 |---|---|
-| `DynamicTouch` | Secure PIN pad — digits shuffle randomly after each keystroke |
+| `dynamic-keys` | Secure PIN pad — digits shuffle randomly after each keystroke |
 | `cell-phone` | CSS phone mockup displaying a video inside the screen |
-| `createPhoneNumber` | Formats a list of digits into a structured phone number `(XXX) XXX-XXXX` |
-| `descendingOrder` | Sorts the digits of a number in descending order |
-| `feux3colors` | Traffic light simulation with automatic red → orange → green cycling |
+| `format-phone-number` | Formats a list of digits into a structured phone number `(XXX) XXX-XXXX` |
+| `descending-order` | Sorts the digits of a number in descending order |
+| `feux-3colors` | Traffic light simulation with automatic red → orange → green cycling |
 | `move-submit-button` | A submit button that escapes the cursor on hover |
-| `showMp` | Password show/hide toggle |
-| `turnLight` | Animated lamp switch (ON/OFF) |
-| `vowelCount` | Counts and lists the vowels found in a sentence |
+| `toggle-password` | Password show/hide toggle |
+| `turn-light` | Animated lamp switch (ON/OFF) |
+| `vowel-counter` | Counts and lists the vowels found in a sentence |
 
 ---
 
