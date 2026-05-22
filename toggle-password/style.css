@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+label {
+    position: relative;
+}
+
+label input {
+    font-size: 1em;
+    background: #fff;
+    padding: 1rem 1.2rem;
+    width: 350px;
+    border-radius: 5px;
+    border: 2px solid #7a7a7a;
+    outline: none;
+}
+
+label input:focus {
+    border-color: #ff4754;
+}
+
+label .password-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 20px;
+    transition: all 0.2s;
+}
+
+label .password-icon:hover {
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.footer a {
+    color: #ff4754;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

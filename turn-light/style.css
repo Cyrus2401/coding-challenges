@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.5s ease;
+}
+
+body:has(.btnLampOff) {
+    background-color: #121216;
+}
+
+body:has(.btnLampOn) {
+    background: radial-gradient(circle, #ffffff 0%, #fffdeb 50%, #fdf5c4 100%);
+}
+
+.scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 75vh;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    transition: color 0.5s ease;
+}
+
+body:has(.btnLampOff) h1 {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+body:has(.btnLampOn) h1 {
+    color: #2c3e50;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.lamp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.lamp {
+    width: 220px;
+    height: auto;
+    transition: filter 0.5s ease;
+}
+
+body:has(.btnLampOn) .lamp {
+    filter: drop-shadow(0 0 40px rgba(253, 245, 196, 0.8)) drop-shadow(0 0 80px rgba(241, 196, 15, 0.4));
+}
+
+button {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+button::before {
+    font-family: "bootstrap-icons";
+    font-size: 2.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+button.btnLampOff {
+    background-color: #2a2a35;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+button.btnLampOff::before {
+    content: "\F610";
+    color: #a0a0b0;
+}
+
+button.btnLampOff:hover {
+    background-color: #353545;
+    transform: scale(1.05);
+}
+
+button.btnLampOn {
+    background-color: #ffffff;
+    border: 2px solid #f1c40f;
+    box-shadow: 0 4px 20px rgba(241, 196, 15, 0.4);
+}
+
+button.btnLampOn::before {
+    content: "\F611";
+    color: #f1c40f;
+}
+
+button.btnLampOn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgba(241, 196, 15, 0.6);
+}
+
+.footer {
+    font-size: 0.85rem;
+    transition: color 0.5s ease;
+}
+
+body:has(.btnLampOff) .footer {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+body:has(.btnLampOff) .footer a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+body:has(.btnLampOn) .footer {
+    color: #7f8c8d;
+}
+
+body:has(.btnLampOn) .footer a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell-Phone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+    }
+
+    .phone-wrapper {
+        position: relative;
+        width: clamp(160px, 28vw, 320px);
+    }
+
+    .phone {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 9 / 18;
+        background-color: #111;
+        border-radius: clamp(24px, 4vw, 44px);
+        border: clamp(4px, 0.8vw, 8px) solid #222;
+        overflow: hidden;
+        box-shadow:
+            0 0 0 2px #444,
+            0 30px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    .div-camera {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: clamp(50px, 8vw, 90px);
+        height: clamp(14px, 2vw, 22px);
+        background-color: #111;
+        border-radius: 20px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .camera-dot {
+        width: clamp(6px, 1vw, 10px);
+        height: clamp(6px, 1vw, 10px);
+        background-color: #2a2a2a;
+        border-radius: 50%;
+        border: 1.5px solid #444;
+    }
+
+    .btn-volume,
+    .btn-power {
+        position: absolute;
+        right: -6px;
+        background-color: #555;
+        border-radius: 0 4px 4px 0;
+        width: 5px;
+    }
+
+    .btn-volume {
+        top: 25%;
+        height: clamp(40px, 7vw, 70px);
+    }
+
+    .btn-power {
+        top: 42%;
+        height: clamp(25px, 4vw, 45px);
+    }
+
+    .screen {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    video {
+        flex: 1;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .footer {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 0.6em 0.5em;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+        font-size: clamp(9px, 1.2vw, 13px);
+        letter-spacing: 1px;
+        flex-shrink: 0;
+    }
+
+    .footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <div class="phone-wrapper">
+
+        <!-- Boutons volume et d'allumage -->
+        <div class="btn-volume"></div>
+        <div class="btn-power"></div>
+
+        <div class="phone">
+            <!-- Camera -->
+            <div class="div-camera">
+                <div class="camera-dot"></div>
+            </div>
+
+            <!-- Ecran -->
+            <div class="screen">
+                <video src="video.mp4" controls></video>
+                <div class="footer">
+                    Réalisé avec ❤️ par
+                    <a href="https://github.com/Cyrus2401" target="_blank" rel="noopener noreferrer">Cyrus2401</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

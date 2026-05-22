@@ -1,5 +1,4 @@
 let icon = document.getElementById('icon')
-/* let icon2 = document.getElementById('icon2') */
 let input = document.querySelector('input')
 
 icon.addEventListener('click', () => {
@@ -13,4 +12,3 @@ icon.addEventListener('click', () => {
         input.setAttribute("type", "password")    
     } 
 })
-
