@@ -29,3 +29,9 @@ A personal collection of scripts and projects resulting from programming challen
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
 ---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
